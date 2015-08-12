@@ -1,0 +1,14 @@
+gunnery:
+  build: .
+  links:
+    - db
+  environment:
+    DJANGO_SETTINGS_MODULE: "gunnery.settings.production"
+    SECRET_KEY: "randomize_me"
+    ADMIN_EMAIL: "admin@admin.local"
+  ports:
+    - "80:80"
+db:
+  image: postgres
+  ports:
+    - "5432:5432"

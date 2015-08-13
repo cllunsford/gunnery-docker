@@ -1,3 +1,11 @@
+# gunnery-docker
+
+My attempt at dockerizing the gunnery app.  Includes gunnery django app, uwsgi, nginx, rabbitmq, and celery services.  Postgres db not included.
+
+docker-compose setup has a companion postgres container for local testing.
+
+Current Status: image builds and runs but hangs on `+ Servers`.  Suspect I'm hitting gunnery/gunnery#17 but haven't been able to resolve.
+
 # Usage
 
 ```

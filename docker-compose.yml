@@ -7,7 +7,7 @@ gunnery:
     SECRET_KEY: "randomize_me"
     ADMIN_EMAIL: "admin@admin.local"
   ports:
-    - "80:80"
+    - "8080:8080"
 db:
   image: postgres
   ports:

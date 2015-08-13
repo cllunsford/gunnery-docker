@@ -4,15 +4,18 @@
 Edit docker-compose.yml:
 ADMIN_EMAIL: "admin@admin.local"
 
-docker-compose build && docker-compose up
+# First time, need to let postgres initialize
+docker-compose build
+docker-compose up db
+# Once db init is complete, break and...
+docker-compose up
 ```
 Login with ADMIN_EMAIL / admin in http interface.
 Change admin default password.
 
 # Outstanding tasks
 
- * docs generation (apt-get install make cd docs make htmlembedded)
- * manage.py migrate fails (not idempotent)
- * manage.py createsuperuser is not idempotent
+ * manage.py migrate fails after first time (not idempotent)
+ * manage.py createsuperuser fails after first time (not idempotent)
  * clicking + on servers / tasks hangs
- * optimize Dockerfile
+ * allowed_hosts generic setup

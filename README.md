@@ -1,6 +1,6 @@
 # gunnery-docker
 
-My attempt at dockerizing the gunnery app.  Includes gunnery django app, uwsgi, nginx, rabbitmq, and celery services.  Postgres db not included.
+My attempt at dockerizing the gunnery app.  Includes gunnery django app, uwsgi, nginx, rabbitmq, and celery services managed by supervisord.  Postgres db not included.
 
 docker-compose setup has a companion postgres container for local testing.
 
